@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifumi Pokémon</title>
+    <script src="./assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <header>
+    <h1>Shifumi Pokémon</h1>
+    <div class="container btn-menue">
+        <button class="btn-menue" onclick="montrediv2()">avatar</button>
+        <button class="btn-menue" onclick="montrediv3()">regle</button>
+        <button class="btn-menue" onclick="montrediv1()">jeu</button>
+    </div>
+    </header>
+    <main>
+        <div id="premiere partie">
+            <div class="bot-content">
+                <img src="./assets/img/Le_N.png" alt="Image de l'ordinateur (N)" class="circle">
+                <h3>Ordinateur</h3>
+                <div class="pokemon-container">
+                    <img id="img-feu" class="pokemon hidden" src="./assets/img/pyrobut.png" alt="Pyrobut">
+                    <img id="img-eau" class="pokemon hidden" src="./assets/img/oratoria.png" alt="Oratoria">
+                    <img id="img-plante" class="pokemon hidden" src="./assets/img/jungko.png" alt="Jungko">
+                </div>
+            </div>
+
+            <div class="player-content">
+                <img src="./assets/img/red.png" alt="Image de Red" class="circle">
+                <p id="nomAffiché">nom: <span id="nomtexte">non defini</span></p>
+                <div class="pokemon-container">
+                    <img id="pyrobut" class="pokemon hidden" src="./assets/img/pyrobut.png" alt="Pyrobut">
+                    <img id="oratoria" class="pokemon hidden" src="./assets/img/oratoria.png" alt="Oratoria">
+                    <img id="jungko" class="pokemon hidden" src="./assets/img/jungko.png" alt="Jungko">
+            </div>
+        </div>
+
+
+            <p>Choisis ton Pokémon</p>
+            <div class="buttons-container">
+                <button onclick="play('feu')" class="btn feu">Feu</button>
+                <button onclick="play('eau')" class="btn eau">Eau</button>
+                <button onclick="play('plante')" class="btn plante">Plante</button>
+            </div>
+
+            <p id="result"></p>
+            <p id="win-count">Nombre de victoires : 0</p>
+        </div>
+            
+        <div id="deuxime partie">
+            <section class="avatar-part">
+                <h2>Choisissez votre avatar</h2>
+                <div class="avatar-container">
+                    <img src="./assets/img/red.png" alt="Red" class="circle">
+                    <img src="./assets/img/blue.png" alt="Blue" class="circle">
+                    <img src="./assets/img/pierre.png" alt="Pierre" class="circle">
+                    <img src="./assets/img/pierre_rocher.png" alt="Pierre Rochard" class="circle">
+                    <img src="./assets/img/Cynthia.png" alt="Cynthia" class="circle">
+                    <img src="./assets/img/Le_N.png" alt="N" class="circle">
+                    <img src="./assets/img/Iris.png" alt="Iris" class="circle">
+                    <img src="./assets/img/amarelys.png" alt="Iris" class="circle">
+                </div>
+                <input id="nominput" type="text" placeholder="Choisissez votre pseudo">
+                <button class="input-button" type="submit" onclick="changerNom()">Valider</button>
+            </section>
+        </div>
+        
+        <div id="troisieme partie">
+            <section class="rule-container">
+                <img src="./assets/img/TRIANGLE.png" alt="Schéma des règles">
+                <p>
+                    Le type plante gagne contre le type eau, le type eau gagne contre le type feu 
+                    et le type feu gagne contre le type plante. Le jeu compte 10 parties au total 
+                    et les points sont distribués de la façon suivante : 1 point pour le gagnant, 
+                    0 point pour le perdant à chaque partie, et 0 point en cas d'égalité. 
+                    Au bout des 10 parties, le gagnant est affiché. Le joueur a également la 
+                    possibilité de rejouer.
+                </p>
+                
+            </section>
+        </div>
+    </main>
+</body>
